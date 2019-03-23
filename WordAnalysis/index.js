@@ -88,9 +88,9 @@ function handleSignoutClick(event) {
 */ 
 function appendPre(message) { 
 console.log(message); 
-/*var pre = document.getElementById('content'); 
+var pre = document.getElementById('content'); 
 var textContent = document.createTextNode(message + '\n'); 
-pre.appendChild(textContent);*/ 
+pre.appendChild(textContent);
 }
 
 function createSpreadsheet(values) {
