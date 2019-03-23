@@ -145,11 +145,10 @@ function callAppsScript(spreadsheetId, formLink) {
 		
 		const {link, formId} = result.response.result;
 		//formLink.innerHTML = 'Ссылка: <a target="_blank" href="' + link + '" >Открыть форму</a> <br>Сохраните ID формы, чтобы восстановить данные: ' + formId;
-		formLink.innerHTML = 'Ссылка: ' +
-			'<a target="_blank" href="' + link + '" >Открыть форму</a>' +
-			'<a type="button" id="statistics-link" href="#statistics">Посмотреть статистику</a>' +
-			'<a id="statistics-link-hidden" href="#statistics" style="display:none;"></a>' + 
-			'<br>Сохраните ID формы: ' + formId;
+		formLink.innerHTML = '<a target="_blank" href="' + link + '" >Открыть форму</a>' + 
+				'<a type="button" id="statistics-link" href="#statistics">Посмотреть статистику</a>' + 
+				'<a id="statistics-link-hidden" href="#statistics" style="display:none;"></a>' + 
+			'	<br>Сохраните ID формы: ' + formId;
 			
 		document.getElementById('statistics-link').addEventListener('click', () => {
 			gapi.client.script.scripts.run({
