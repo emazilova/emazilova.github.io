@@ -219,13 +219,13 @@ input[type="checkbox"] {
 .answer-row__word {
     border: 1px solid #dddd;
     padding: 8px;
-    width: 200px
+    width: 200px;
 }
 
 .answer-row__count {
     padding: 8px;
     border: 1px solid #ddd;
-    width: 50px
+    width: 130px; 
 }
 
 .question-container {
