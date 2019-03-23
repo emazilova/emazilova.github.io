@@ -247,6 +247,7 @@ function callAppsScript(spreadsheetId, formLink) {
 					qContainer.appendChild(qContent);
 					statContainer.appendChild(qContainer);
 					
+					const sum = Object.values(question).reduce((res,cur) => res + cur, 0);
 					Object.entries(question).forEach(([word, count]) => {
 						const aRow = document.createElement('div');
 						aRow.classList.add('answer-row');
@@ -258,7 +259,7 @@ function callAppsScript(spreadsheetId, formLink) {
 						
 						const qCount = document.createElement('div');
 						qCount.classList.add('answer-row__count');
-						qCount.innerText = count;
+						qCount.innerText = count + ' (' + parseFloat((count/sum*100).toFixed(2)) + '%)';
 						aRow.appendChild(qCount);
 						
 						qContainer.appendChild(aRow);
