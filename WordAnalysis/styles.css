@@ -220,12 +220,19 @@ input[type="checkbox"] {
     border: 1px solid #dddd;
     padding: 8px;
     width: 200px;
+    border-bottom: 0;
 }
 
 .answer-row__count {
     padding: 8px;
     border: 1px solid #ddd;
-    width: 130px; 
+    width: 130px;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.answer-row:last-child {
+    border-bottom: 1px solid #ddd;
 }
 
 .question-container {
@@ -233,5 +240,5 @@ input[type="checkbox"] {
 }
 
 #statistics-link { 
-margin-left: 8px; 
+	margin-left: 8px; 
 }
